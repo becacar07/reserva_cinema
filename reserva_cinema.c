@@ -37,8 +37,21 @@ int main() {
         scanf("%d", &opcao);
 
         if (opcao == 1) {
-            /* Opcao 1: mapa de assentos (proximo pedaco) */
-            printf("Opcao em construcao.\n");
+            /* OPCAO 1 - Mapa de assentos */
+            printf("\n--- MAPA DE ASSENTOS ---\n");
+            printf("Assento   ");
+            for (j = 0; j < 5; j++) {
+                printf("%d ", j + 1);
+            }
+            printf("\n");
+            for (i = 0; i < 3; i++) {
+                printf("Sessao %d  ", i + 1);
+                for (j = 0; j < 5; j++) {
+                    printf("%d ", assentos[i][j]);
+                }
+                printf("\n");
+            }
+            printf("Legenda: 0 = livre | 1 = reservado\n");
 
         } else if (opcao == 2) {
             /* PARTE 2 (amigo): reservar assento */
